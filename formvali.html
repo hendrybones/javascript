@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form validation</title>
+        <script type="text/javascript">
+        <!--
+            //form validation code 
+            function validate() {
+                if( document.myForm.Name.value=="") {
+                    alert("please provide your name!");
+                    document.myForm.Name.focus() ;
+                    return false;
+                }
+                if(document.myForm.Email.value=="") {
+                    alert("please provide email");
+                    document.myForm.Email.focus();
+                    return false;
+                }
+                if(document.myForm.Zip.value=="" || isNaN(document.myForm.Zip.value) ||
+                     document.myForm.Zip.value.length !=5){
+                         alert("please provide zip in the format #####.");
+                         document.myForm.Zip.focus()
+                         return false;
+                        
+                     }
+                     if(document.myForm.Country.value=="-1") {
+                         alert("please provide your counrty");
+                         return false;
+                     }
+                     return(true);
+            }
+            //-->
+        </script>
+
+    </head>
+    <body>
+        <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
+            <table cellspacing="2" cellpadding ="2" border="1">
+                <tr>
+                    <td align="right">name</td>
+                    <td><input type="text" name="Name" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Email</td>
+                    <td><input type="text" name="Email"</td>
+                </tr>
+                <tr>
+                    <td align="right">Zip code</td>
+                    <td><input type="text" name="Zip"</td>
+                </tr>
+                <tr>
+                    <td align="right"> country</td>
+                    <td>
+                        <select name="country">
+                            <option value="-1" selected>[choose yours]</option>
+                            <option value="1">USA</option>
+                            <option value="2">UK</option>
+                            <option value="3">India</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"></td>
+                    <td><input type="submit" value="Submit"</td>
+                </tr>
+
+            
+            </table>
+        </form>
+
+    </body>
+</html>

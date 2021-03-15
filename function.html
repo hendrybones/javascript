@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+        function concantinate(first, last) {
+            var full;
+            full= first + last;
+            return full;
+        }
+        function secondFunction() {
+            var result;
+            result= concantinate('zara', 'Ali');
+            document.write(result);
+        }
+
+        </script>
+    </head>
+    <body>
+        <p> click the following button to call function</p>
+        <form>
+            <input type="button" onclick="secondFunction()" value="call function"/>
+        </form>
+
+    </body>
+</html>

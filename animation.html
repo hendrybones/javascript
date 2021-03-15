@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript animation </title>
+        <script type="text/javascript">
+        <!--
+            var imgObj=null;
+
+            function init() {
+                imgObj=document.getElementById('myImage');
+                imgObj.style.position='relative';
+                imgObj.style.left='opx';
+            }
+            function moveRight() {
+                imgObj.style.left=parseInt(imgObj.style.left) + 10 + 'px';
+            }
+            window.onload=init;
+            //-->
+        </script>
+
+    </head>
+    <body>
+        <form>
+            <img id="myImage" src="images/html.gif"/>
+            <p> click button bellow </p>
+            <input type="button" value="click me" onclick="moveRight();" />
+        </form>
+    </body>
+
+</html>
