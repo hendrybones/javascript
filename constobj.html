@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>javscrip constant</h2>
+        <p>declaring a constant object doesnt make the properties uncheangeable</p>
+        <p id="demo"></p>
+
+        <script>
+            //create and object
+            const car={type:"flat",model:"500",color:"white"};
+            car.color="red";
+            car.owner="hendry";
+            document.getElementById("demo").innerHTML="car owner is " + car.owner;
+        </script>
+    </body>
+</html>
