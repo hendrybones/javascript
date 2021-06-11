@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> jvascript scope</h2>
+        <p>a global variable can be access from any script or function</p>
+        <p id="demo"></p>
+        <script>
+            var carName="volvo";
+            myFunction();
+
+            function myFunction(){
+                document.getElementById("demo").innerHTML=
+                "i can display "  + carName;
+
+            }
+        </script>
+    </body>
+</html>
